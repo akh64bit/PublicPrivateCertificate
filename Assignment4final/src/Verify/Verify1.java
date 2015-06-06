@@ -45,11 +45,13 @@ public class Verify1 {
     KeyFactory keyFactory = KeyFactory.getInstance("RSA");
     RSAPrivateKeySpec rsaPrivKeySpec = keyFactory.getKeySpec(privateKey, RSAPrivateKeySpec.class);
     System.out.println("PrivKey Modulus : " + rsaPrivKeySpec.getModulus());  
-    System.out.println("PrivKey Exponent : " + rsaPrivKeySpec.getPrivateExponent());  
+    System.out.println("PrivKey Exponent : " + rsaPrivKeySpec.getPrivateExponent());
     
+    // Create an instance of the X509 certificate
     X509Certificate certTA = (X509Certificate) certFactory.generateCertificate(Raghupub);
     X509Certificate certCA = (X509Certificate) certFactory.generateCertificate(Trustcenter);
     
+    //Get the public key of the Certifying Authority and TA
     PublicKey pukCA = (PublicKey) certCA.getPublicKey();
     PublicKey pukTA = (PublicKey) certTA.getPublicKey();
     //Print the certificate for CA
