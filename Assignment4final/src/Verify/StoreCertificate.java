@@ -8,7 +8,7 @@ import java.io.Writer;
 import java.nio.charset.Charset;
 import java.security.KeyStore;
 import java.security.cert.Certificate;
-
+//Class to store the certificate and the retrieve the file. It can store the certificate of both TA and CA
 public class StoreCertificate {
   public static void main(String[] argv) throws Exception {
     FileInputStream is = new FileInputStream("your.keystore");

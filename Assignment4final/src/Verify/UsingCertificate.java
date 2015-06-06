@@ -3,7 +3,7 @@ package Verify;
 import java.io.FileInputStream;
 import java.security.cert.Certificate;
 import java.security.cert.CertificateFactory;
-
+//Class for using the Certificate
 public class UsingCertificate {
 
   public static void main(String[] args) throws Exception {
